@@ -5,6 +5,7 @@
 
 <div class="text-center">
     <h1 class="display-4">Expenses</h1>
+    <br />
     <table class="table">
     <thead>
         <tr>
@@ -16,6 +17,9 @@
            </th>
            <th>
                Description
+           </th>
+           <th>
+               Actions
            </th>
            </tr>
     </thead>
@@ -32,6 +36,10 @@
                         </td>
                         <td>
                             @expense.Description
+                        </td>
+                        <td>
+                            <a asp-action="CreateEditExpense" asp-route-id="@expense.Id">Edit</a>
+                            <a asp-action="DeleteExpense" asp-route-id="@expense.Id">Delete</a>
                         </td>
                     </tr>
                 }
